@@ -1,9 +1,9 @@
-# docker-recipes
+# docker-laravel-recipes
 
 
 
 
-docker gat image-id image-name
+docker tag image-id image-name
 
 
 
