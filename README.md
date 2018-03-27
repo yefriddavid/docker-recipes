@@ -1,5 +1,6 @@
-# docker-laravel-recipes
+# docker-laravel-recipes (php 7, mongodb, cron)
 
+##Documentation for humans and beginners
 
 
 
@@ -158,7 +159,7 @@ Si deseas subur solo la nueva aplicacion
 docker-compose -f apps-compose.yml up -d
 
 Si deseas crear la base de datos
-docker exec -it securitydb mysql -u root -pbCE2vnFLDBCznwZcNdKec6NdGX9dJSmwmQnsNSP4 -e "CREATE DATABASE security"
+docker exec -it securitydb mysql -u root -pPASSWORDBD -e "CREATE DATABASE security"
 
 si deseas construir la base de datos de seguridad
 docker exec -it api_microvoz php artisan migrate
@@ -177,16 +178,16 @@ Agregar el usuario para el sistema docker
 grant privilege all on *.* to 'Microvoz2018'@'%'
 
 
-CREATE USER 'ftxcn6eIj5Vuad8'@'173.17.0.18' IDENTIFIED BY 'VuHonIshkIcUjVewispoajFeghiv8swacGaw';
-GRANT ALL PRIVILEGES ON OP.* TO 'ftxcn6eIj5Vuad8'@'173.17.0.18' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON asterisk.* TO 'ftxcn6eIj5Vuad8'@'173.17.0.18' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON CRM.* TO 'ftxcn6eIj5Vuad8'@'173.17.0.18' WITH GRANT OPTION;
+CREATE USER 'ftxcn6eIj5Vuad8'@'173.17.0.18' IDENTIFIED BY 'PASSWORDBD';
+GRANT ALL PRIVILEGES ON OP.* TO 'username'@'173.17.0.18' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON asterisk.* TO 'username'@'173.17.0.18' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON CRM.* TO 'username'@'173.17.0.18' WITH GRANT OPTION;
 
 
 
 //security db
-CREATE USER 'kIc6jVe41s7oa2'@'173.17.0.18' IDENTIFIED BY 'bCE2vnFLDBCznwZcNdKec6NdGX9dJSmwmQnsNSP4'
-GRANT ALL PRIVILEGES ON security.* TO 'kIc6jVe41s7oa2'@'173.17.0.18' WITH GRANT OPTION
+CREATE USER 'username'@'173.17.0.18' IDENTIFIED BY 'PASSWORDBD'
+GRANT ALL PRIVILEGES ON DBNAME.* TO 'username'@'173.17.0.18' WITH GRANT OPTION
 
 
 ```
@@ -218,11 +219,11 @@ php artisan passport:client --password
 SpsKxZnRrEp1nky0tmrFJmJ8aXueX6G8kchqYzal
 php artisan passport:install
 
-grant privilege all on *.* to 'Microvoz2018'@'%'
+grant privilege all on *.* to 'username'@'%'
 
-git clonehttps://github.com/microvoz/callcenter0_gestion.git
 
-git clonehttps://github.com/microvoz/callcenter0_admin.git(sistema)
+
+
 
 
 
@@ -265,7 +266,7 @@ Reiniciar  firehol
 
 
 
-wget -d --header="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU5NmI4ZjJjNWRiNzZkODAxMzU2MWQzMWQ5YzQ3ODg5MzA0ZTU0OTQzYjViNjg1ZmEyNWM0ZDU4MDM2ZWZkOGYzNTQ1ZTg2NzFlYzQ5MjU3In0.eyJhdWQiOiIxIiwianRpIjoiZTk2YjhmMmM1ZGI3NmQ4MDEzNTYxZDMxZDljNDc4ODkzMDRlNTQ5NDNiNWI2ODVmYTI1YzRkNTgwMzZlZmQ4ZjM1NDVlODY3MWVjNDkyNTciLCJpYXQiOjE1MTg2NDc3MDQsIm5iZiI6MTUxODY0NzcwNCwiZXhwIjoxNTUwMTgzNzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.oPhOPXk8_Zx6W75JLhJ7IEso78gW1tmp68csebYr-7_Xj_GpL23L3WGqGX4-VaMnsv8O-PLjlnTyRheh62U0m8b2RP2DVC6VFEyORGRClQjRy6wwgD98Jj_K1-441SOSknvpaGnzXpOL3YeyFna9DHnBWVzYvgD5o8RXiXAJUlgy0--gGy9UUnCdNedKTIeWbvAuCXwpTbUA-lUKkwtHpL6XUc9etEwHX3xBOX9EE92lKJtvfZ2JKwpGVwNLb-xiVszJzBghIQNCCSI-v0HysYt84aK4DWffo91frc8rCfK_7DgEdJ7UhBAd0hUap1GClPd538BhL7fYL3X_HDf5xXQZ8DsqdNCZQ_ZRA_TI8eQRyCxnb-LngqwnK6Xx4u2SPr5_hapORtc9pUvi19S8fZOF3iwj80Qw35UiIspu55qfsodCCn_Q-KcyRubZylJNLPCYPuH-rMHMznxH_cFp926LCcKAE4vRALQrGMGIGkyC_XlIPMDvYSJ4-bkYGbaS6SK4aSsV6keHm-oID77MrSyuH91MFKC_xe_OOVqO4xhT5AHL4hGAdYiVhbG0DX99xVvaUnEQDNr3RxzznJocj43njNaBBOE5qbDICFYnsbZiluzGvFpaEmtMwfCJPWhNmX0LUy9H2ViqeA34v7Jxo_jRX1M7bDlk5aX0TxZbbjk" --header='Accept: Application/json' http://10.10.0.89:81/api/campaigns
+wget -d --header="Authorization: Bearer accessTocken" --header='Accept: Application/json' http://0.0.0.0:81/api/campaigns
 
 
 
