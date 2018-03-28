@@ -162,17 +162,17 @@ Si deseas crear la base de datos
 docker exec -it securitydb mysql -u root -pPASSWORDBD -e "CREATE DATABASE security"
 
 si deseas construir la base de datos de seguridad
-docker exec -it api_microvoz php artisan migrate
+docker exec -it api_laravel php artisan migrate
 
 si deseas instalar la aplicacion para crear las configuraciones
-docker exec -it api_microvoz php artisan app:install
+docker exec -it api_laravel php artisan app:install
 
-docker exec -it api_microvoz php artisan passport:install
-docker exec -it api_microvoz php artisan passport:client --password
-NOOOOdocker exec -it api_microvoz php artisan db:seed
-docker exec -it api_microvoz composer dump-autoload
-docker exec -it api_microvoz php artisan api:cache
-docker exec -it api_microvoz php artisan dev:gen 1
+docker exec -it api_laravel php artisan passport:install
+docker exec -it api_laravel php artisan passport:client --password
+docker exec -it api_laravel php artisan db:seed
+docker exec -it api_laravel composer dump-autoload
+docker exec -it api_laravel php artisan api:cache
+docker exec -it api_laravel php artisan dev:gen 1
 
 Agregar el usuario para el sistema docker
 grant privilege all on *.* to 'Microvoz2018'@'%'
@@ -213,7 +213,7 @@ ps -ef | grep docker | awk '{print"kill -9",$2}' | sh
 Darle acceso a los dockers para que se conecten a la base de datos
 Tener instalado docker-compose
 
-docker exec -it securitydb mysql -u root -pbCE2vnFLDBCznwZcNdKec6NdGX9dJSmwmQnsNSP4 -e "CREATE DATABASE security"
+docker exec -it securitydb mysql -u root -pPASSWORD -e "CREATE DATABASE security"
 php artisan passport:client --password
 1
 SpsKxZnRrEp1nky0tmrFJmJ8aXueX6G8kchqYzal
@@ -316,3 +316,5 @@ para scripts
 apt-get install socat
 sudo socat TCP-LISTEN:81,fork TCP:173.17.0.20:80
 # docker-composer-php
+
+
