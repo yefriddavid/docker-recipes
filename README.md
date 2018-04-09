@@ -30,7 +30,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 
-### NodeJs Installaction
+### NodeJs and NVM Installaction
 ```
 curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash 
 source ~/.bashrc 
@@ -64,10 +64,11 @@ docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update
 
 
 ### Docker composer container
+```
 docker run --rm --interactive --tty \
     --volume $PWD:/app \
     composer install
-
+```
 
 
 
@@ -81,7 +82,7 @@ docker run --rm --interactive --tty \
 
 ### Docker create networks
 
-Now we going to create or defined one networks for dockers
+***Now we going to create or defined one networks for dockers***
 ```
 networks:
   mynet:
@@ -223,7 +224,7 @@ interface docker-network-name docker
         policy accept
 
 
-### Reiniciar  firehol
+### Restart  firehol
 /etc/init.d/firehol restart
 
 
