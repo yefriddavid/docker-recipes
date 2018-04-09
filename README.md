@@ -29,8 +29,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ### Some utils docker commands
 
-docker ps
-docker network ls
+docker ps \
+docker network ls \
 docker network inspect **docker-network-name**
 
 ### Change volumen name
