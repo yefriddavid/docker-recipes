@@ -1,25 +1,27 @@
 # Docker-NodeJs-Laravel Recipes 
-## (php 7.2, mongodb, cron-laravel, ngnex) among others
 
-## Documentation for humans and beginners
-
-## I am buiding this for now
-Some topics
-Docker 
-Laravel
-Laravel Installaction
-Laravel Passport
-NodeJs
-Utilities (Socat, Composer, wget)
-Dockerfile examples
-Cron
-Laravel Schedules
-Dockers Networks
+You will found some important commands for some of this beautyfull tools for developers **php 7.2, mongodb, cron-laravel, ngnex) among others**
 
 
+### Documentation for humans and beginners
+
+### I am buiding this for now
+Some topics that you will found here
+Docker \
+Laravel \
+Laravel Installaction \
+Laravel Passport \
+NodeJs \
+Utilities (Socat, Composer, wget) \
+Dockerfile examples \
+Laravel Schedules **(Cron)** \
+Laravel Schedules \
+Dockers Networks \
 
 
-## Docker install
+
+
+### Docker install
 ```
 sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-``uname -s``-``uname -m`` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
@@ -30,9 +32,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 ## Change volumen name
 docker tag image-id image-name
 
-#Run docker image command over a specific folder
-docker run --rm --volume $PWD:/app/temp  -w /app/temp node npm install
-docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update
+# Run docker image command over a specific folder
+docker run --rm --volume $PWD:/app/temp  -w /app/temp node npm install \
+docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update \
 
 
 
@@ -41,9 +43,6 @@ docker run --rm --interactive --tty \
     --volume $PWD:/app \
     composer install
 
-
-etc/microvoz
-phone
 
 
 
