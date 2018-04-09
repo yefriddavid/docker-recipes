@@ -44,12 +44,17 @@ nvm alias default 9.2.0
 
 ### Some utils docker commands
 
+#### Generals commands
+```
 docker ps \
 docker network ls \
 docker network inspect **docker-network-name**
+```
 
-### Change volumen name
+#### Change volumen name
+```
 docker tag image-id image-name
+```
 
 ### Run docker image command over a specific folder
 ```
