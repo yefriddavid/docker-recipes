@@ -1,65 +1,53 @@
-# docker-laravel-recipes (php 7, mongodb, cron)
+# docker-laravel-recipes (php 7.2, mongodb, cron-laravel)
+
+
+#I am buiding this for now
+Some topics
+Docker 
+Laravel
+Laravel Installaction
+Laravel Passport
+NodeJs
+Utilities (Socat, Composer, wget)
+Dockerfile examples
+Cron
+Laravel Schedules
+Dockers Networks
+
+
 
 ##Documentation for humans and beginners
 
 
+#Docker install
+"sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-``uname -s``-``uname -m`` -o /usr/local/bin/docker-compose"
+sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-``uname -s``-``uname -m`` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
+
+#Some utils docker commands
+
+#Change volumen name
 docker tag image-id image-name
 
-
-
+#Run docker image command over a specific folder
 docker run --rm --volume $PWD:/app/temp  -w /app/temp node npm install
 docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update
-wget 127.0.0.1:81/api/ping
 
+//wget 127.0.0.1:81/api/ping
+
+
+#Docker composer container
 docker run --rm --interactive --tty \
     --volume $PWD:/app \
     composer install
 
 
-las carpetas deben llamarsen
-sistema
-sistema-hoy softlik a sistema
 etc/microvoz
 phone
 
-archivos que involucran la base de datos dentro de phone
-
-phone/includes/xconfiguracion.php
 
 
-
-archivos donde hay configuracion de la base de datos
-/etc/microvoz
-nvf_vars.inc
-db_conf
-
-
-phone/includes/xconfiguracion.php
-
-
-
-
-en el puerto 1512 queda el phone
-en el puerto 1513 queda el admin
-
-
-3004 puerto de pruebas api
-
-
-https://github.com/microvoz/deploy_basico.git
-
-git clone https://github.com/microvoz/callcenter0_admin.git sistema
-cd sistema/v4
-composer install
-
-git clone https://github.com/microvoz/phone.git
-
-
-
-instalacion docker
-sudo wget -qO- https://get.docker.com/ | sh
-apt-get install docker.io
 
 
 
@@ -94,37 +82,6 @@ networks:
 https://fordodone.com/2016/03/30/docker-compose-static-ip-address-in-docker-compose-yml/
 
 
-
-
-Instalacion de AGI-ACD
-
-1) Instalcion de Docker y docker-compose
-
-    sudo wget -qO- https://get.docker.com/ | sh
-
-    "sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose"
-
-    sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-
-    sudo chmod +x /usr/local/bin/docker-compose
-
-
-2) Descargar repositorio deply-basico
-
-    mkdir /home/microvoz
-
-    cd /home/microvoz
-
-    git clone https://github.com/microvoz/deploy_basico.git deploy
-
-
-3) Hacer deploy de docker
-
-    cd deploy
-
-    cp .env.example .env
-
-    ./deploy.sh
 
 
 
@@ -276,9 +233,6 @@ telnet localhost 4573
 wget -d --header="Authorization: Bearer PONERTOKENACA" --header='Accept: Application/json' http://173.17.0.20:81/api/campaigns
 
 wget -d --header="Authorization: Bearer PONERTOKENACA" --header='Accept: Application/json' http://173.17.0.18/api/campaigns
-
-
-
 
 
 
