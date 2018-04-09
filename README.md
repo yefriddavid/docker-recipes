@@ -198,10 +198,9 @@ grant privilege all on *.* to 'username'@'%'
 
 
 
-docker run busybox ping 172.17.0.1
-
-docker run busybox nslookup 172.17.0.1
-docker run busybox nslookup google.com
+docker run busybox ping 172.17.0.1 \
+docker run busybox nslookup 172.17.0.1 \
+docker run busybox nslookup google.com \
 
 
 
