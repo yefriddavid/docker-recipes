@@ -7,12 +7,18 @@ You will found some important commands for some of this beautyfull tools for dev
 
 ### I am buiding this for now, please sorry for this garabatos
 Some topics that you will found here
-- [x] Docker Inttallation
+- [x] Docker and Docker-compose Intallation
+- [ ] NodeJs and NVM Installaction
 - [x] Docker Configuration and Commands 
+    - Dockerfile
+    - Docker networks
+    - Docker utils
+    - Docker environment variables
+    - Docker utils commands
 - [ ] Laravel Installaction 
 - [ ] Laravel 
 - [ ] Laravel Passport 
-- [ ] NodeJs 
+
 - [ ] Utilities (Socat, Composer, wget) 
 - [ ] Dockerfile examples 
 - [ ] Laravel Schedules \*(Cron)\* 
@@ -22,7 +28,7 @@ Some topics that you will found here
 
 
 
-### Docker and Docker-compose install
+### Docker and Docker-compose Intallation
 ```
 $ sudo wget -qO- https://get.docker.com/ | sh
 
