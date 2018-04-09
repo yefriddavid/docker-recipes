@@ -56,7 +56,7 @@ docker network inspect **docker-network-name**
 docker tag image-id image-name
 ```
 
-### Run docker image command over a specific folder
+### Run docker image command over an specific folder
 ```
 docker run --rm --volume $PWD:/app/temp  -w /app/temp node npm install \
 docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update 
