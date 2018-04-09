@@ -7,17 +7,17 @@ You will found some important commands for some of this beautyfull tools for dev
 
 ### I am buiding this for now, please sorry for this garabatos
 Some topics that you will found here
-1. Docker 
-2. Laravel 
-3. Laravel Installaction 
-4. Laravel Passport 
-5. NodeJs 
-6. Utilities (Socat, Composer, wget) 
-7. Dockerfile examples 
-8. Laravel Schedules **(Cron)** 
-9. Laravel Schedules 
-10. Dockers Networks 
-11. Firehole 
+1. [x] Docker 
+2. [] Laravel 
+3. [] Laravel Installaction 
+4. [] Laravel Passport 
+5. [] NodeJs 
+6. [] Utilities (Socat, Composer, wget) 
+7. [] Dockerfile examples 
+8. [] Laravel Schedules \*(Cron)\* 
+9. [] Laravel Schedules 
+10. [] Dockers Networks 
+11. [ ] Firehole 
 
 
 
