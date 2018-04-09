@@ -1,5 +1,6 @@
 # docker-laravel-recipes (php 7.2, mongodb, cron-laravel)
 
+## Documentation for humans and beginners
 
 ## I am buiding this for now
 Some topics
@@ -16,29 +17,25 @@ Dockers Networks
 
 
 
-##Documentation for humans and beginners
 
-
-#Docker install
+## Docker install
 ```
-"sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-``uname -s``-``uname -m`` -o /usr/local/bin/docker-compose"
 sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-``uname -s``-``uname -m`` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-#Some utils docker commands
+## Some utils docker commands
 
-#Change volumen name
+## Change volumen name
 docker tag image-id image-name
 
 #Run docker image command over a specific folder
 docker run --rm --volume $PWD:/app/temp  -w /app/temp node npm install
 docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update
 
-//wget 127.0.0.1:81/api/ping
 
 
-#Docker composer container
+# Docker composer container
 docker run --rm --interactive --tty \
     --volume $PWD:/app \
     composer install
@@ -50,15 +47,13 @@ phone
 
 
 
-
-
-
 instalacion nodejs
-
+```
 curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
 source ~/.bashrc
 nvm install 9.2.0
 nvm alias default 9.2.0
+```
 
 
 
@@ -66,9 +61,7 @@ nvm alias default 9.2.0
 
 
 
-
-ips statics
-
+## Docker create networks
 
 networks:
   mynet:
@@ -79,7 +72,7 @@ networks:
 
 
 
-
+## Some friendly links
 https://fordodone.com/2016/03/30/docker-compose-static-ip-address-in-docker-compose-yml/
 
 
@@ -104,7 +97,7 @@ APP_LOG_LEVEL=error
 ```
 
 
-#Comandos de intalacion API
+## Comandos de intalacion API
 ```
 cd deploy
 
@@ -267,9 +260,12 @@ para scripts
 ~
 
 
+## Some utils apps
 
 apt-get install socat
 sudo socat TCP-LISTEN:81,fork TCP:173.17.0.20:80
+
+
 # docker-composer-php
 
 
