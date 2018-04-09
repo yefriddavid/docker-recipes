@@ -5,7 +5,7 @@ You will found some important commands for some of this beautyfull tools for dev
 
 ### Documentation for humans or beginners
 
-### I am buiding this for now
+### I am buiding this for now, please sorry for this garabatos
 Some topics that you will found here
 Docker \
 Laravel \
@@ -26,6 +26,19 @@ Firehole \
 sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
+
+
+### NodeJs Installaction
+```
+curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash 
+source ~/.bashrc 
+nvm install 9.2.0 
+nvm alias default 9.2.0
+```
+
+
+
+
 
 ### Some utils docker commands
 
@@ -52,13 +65,6 @@ docker run --rm --interactive --tty \
 
 
 
-### NodeJs Installaction
-```
-curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash 
-source ~/.bashrc 
-nvm install 9.2.0 
-nvm alias default 9.2.0
-```
 
 
 
@@ -86,13 +92,6 @@ https://fordodone.com/2016/03/30/docker-compose-static-ip-address-in-docker-comp
 
 
 
-A continuación se documenta paso a paso la instalación del api, los dockers y el manager: \
-git clone https://github.com/microvoz/deploy_basico.git deploy \
-cd deploy \
-sh deploy.sh \
-cp .env.example .env \
-
-
 ```
 Configurar las variables de entorno .env del api con los siguientes valores (.env)
 cd callcenter0_api
@@ -104,7 +103,7 @@ APP_LOG_LEVEL=error
 ```
 
 
-## Comandos de intalacion API
+### Comandos de intalacion API
 ```
 cd deploy
 
@@ -150,7 +149,7 @@ GRANT ALL PRIVILEGES ON DBNAME.* TO 'username'@'173.17.0.18' WITH GRANT OPTION
 
 ```
 
-Notes and tips:
+### Notes and tips:
 ```
 La red interna de los dockers es 173.17.0.0
 ifconfig
@@ -159,7 +158,7 @@ ifconfig
 ps -ef | grep docker | awk '{print"kill -9",$2}' | sh
 ```
 
-## Comandos Adicionales
+### Comandos Adicionales
 ```
 dokcer-compose up -d 
 docker-compose stop
@@ -213,38 +212,32 @@ iptables -I FORWARD -s 173.17.0.0/16 -j ACCEPT
 
 
 firehol
-interface microvoz-apps docker
+interface docker-network-name docker
         policy accept
 
 
-Reiniciar  firehol
-
+### Reiniciar  firehol
 /etc/init.d/firehol restart
 
 
 
 
-### Here we going to test some route
-wget -d --header="Authorization: Bearer accessTocken" --header='Accept: Application/json' http://0.0.0.0:81/api/campaigns
+### Here we going to test some routes
+wget -d --header="Authorization: Bearer accessTocken" --header='Accept: Application/json' http://0.0.0.0:81/api/ping
 
 
 
 xinetd
 telnet localhost 4573
 
-wget -d --header="Authorization: Bearer PONERTOKENACA" --header='Accept: Application/json' http://173.17.0.20:81/api/campaigns
-
-wget -d --header="Authorization: Bearer PONERTOKENACA" --header='Accept: Application/json' http://173.17.0.18/api/campaigns
+wget -d --header="Authorization: Bearer put-tocken-here" --header='Accept: Application/json' http://173.17.0.20:81/api/foo
 
 
 
 
 
-ssh drios@10.10.0.29 -p 51122
 
-
-
-crontab -u root microvoz-cron
+crontab -u root laravel-cron
 
 
 
