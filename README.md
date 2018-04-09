@@ -17,7 +17,7 @@ Dockerfile examples \
 Laravel Schedules **(Cron)** \
 Laravel Schedules \
 Dockers Networks \
-
+Firehole \
 
 
 
@@ -27,18 +27,18 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-## Some utils docker commands
+### Some utils docker commands
 
-## Change volumen name
+### Change volumen name
 docker tag image-id image-name
 
-# Run docker image command over a specific folder
+### Run docker image command over a specific folder
 docker run --rm --volume $PWD:/app/temp  -w /app/temp node npm install \
-docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update \
+docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update 
 
 
 
-# Docker composer container
+### Docker composer container
 docker run --rm --interactive --tty \
     --volume $PWD:/app \
     composer install
@@ -47,11 +47,11 @@ docker run --rm --interactive --tty \
 
 
 
-instalacion nodejs
+### NodeJs Installaction
 ```
-curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash \
-source ~/.bashrc \
-nvm install 9.2.0 \
+curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash 
+source ~/.bashrc 
+nvm install 9.2.0 
 nvm alias default 9.2.0
 ```
 
@@ -61,7 +61,9 @@ nvm alias default 9.2.0
 
 
 
-## Docker create networks
+### Docker create networks
+
+Now we going to create or defined one networks for dockers
 ```
 networks:
   mynet:
@@ -72,7 +74,7 @@ networks:
 ```
 
 
-## Some friendly links
+### Some friendly links
 https://fordodone.com/2016/03/30/docker-compose-static-ip-address-in-docker-compose-yml/
 
 
@@ -143,25 +145,29 @@ GRANT ALL PRIVILEGES ON DBNAME.* TO 'username'@'173.17.0.18' WITH GRANT OPTION
 
 ```
 
-Comentarios:
+Notes and tips:
 ```
 La red interna de los dockers es 173.17.0.0
 ifconfig
-```
 
-#Comandos Adicionales
-```
-dokcer-compose up
-docker inspect api_microvoz
+**Sometimes we have problems with docker run with iptables, therefore it is important to run this command to kill docker services **
 ps -ef | grep docker | awk '{print"kill -9",$2}' | sh
 ```
 
+## Comandos Adicionales
+```
+dokcer-compose up -d 
+docker-compose stop
+docker-compose rm -f
+
+docker inspect **dockername**
+```
 
 
 
 
 
-Darle acceso a los dockers para que se conecten a la base de datos
+### Darle acceso a los dockers para que se conecten a la base de datos
 Tener instalado docker-compose \
 docker exec -it securitydb mysql -u root -pPASSWORD -e "CREATE DATABASE security" \
 php artisan passport:client --password \
@@ -213,7 +219,7 @@ Reiniciar  firehol
 
 
 
-
+### Here we going to test some route
 wget -d --header="Authorization: Bearer accessTocken" --header='Accept: Application/json' http://0.0.0.0:81/api/campaigns
 
 
