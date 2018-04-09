@@ -49,9 +49,9 @@ docker run --rm --interactive --tty \
 
 instalacion nodejs
 ```
-curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
-source ~/.bashrc
-nvm install 9.2.0
+curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash \
+source ~/.bashrc \
+nvm install 9.2.0 \
 nvm alias default 9.2.0
 ```
 
@@ -62,14 +62,14 @@ nvm alias default 9.2.0
 
 
 ## Docker create networks
-
+```
 networks:
   mynet:
     driver: bridge
     ipam:
       config:
       - subnet: 172.25.0.0/24
-
+```
 
 
 ## Some friendly links
@@ -79,11 +79,11 @@ https://fordodone.com/2016/03/30/docker-compose-static-ip-address-in-docker-comp
 
 
 
-A continuación se documenta paso a paso la instalación del api, los dockers y el manager:
-git clone https://github.com/microvoz/deploy_basico.git deploy
-cd deploy
-sh deploy.sh
-cp .env.example .env
+A continuación se documenta paso a paso la instalación del api, los dockers y el manager: \
+git clone https://github.com/microvoz/deploy_basico.git deploy \
+cd deploy \
+sh deploy.sh \
+cp .env.example .env \
 
 
 ```
@@ -162,14 +162,11 @@ ps -ef | grep docker | awk '{print"kill -9",$2}' | sh
 
 
 Darle acceso a los dockers para que se conecten a la base de datos
-Tener instalado docker-compose
-
-docker exec -it securitydb mysql -u root -pPASSWORD -e "CREATE DATABASE security"
-php artisan passport:client --password
-1
-SpsKxZnRrEp1nky0tmrFJmJ8aXueX6G8kchqYzal
-php artisan passport:install
-
+Tener instalado docker-compose \
+docker exec -it securitydb mysql -u root -pPASSWORD -e "CREATE DATABASE security" \
+php artisan passport:client --password \
+SpsKxZnRrEp1nky0tmrFJmJ8aXueX6G8kchqYzal \
+php artisan passport:install \
 grant privilege all on *.* to 'username'@'%'
 
 
@@ -262,7 +259,7 @@ para scripts
 
 ## Some utils apps
 
-apt-get install socat
+apt-get install socat \
 sudo socat TCP-LISTEN:81,fork TCP:173.17.0.20:80
 
 
