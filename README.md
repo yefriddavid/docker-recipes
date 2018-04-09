@@ -49,6 +49,8 @@ nvm alias default 9.2.0
 docker ps \
 docker network ls \
 docker network inspect **docker-network-name**
+docker exec -it dockername bash
+sudo docker run -i -d **ubuntu**
 ```
 
 #### Change volumen name
