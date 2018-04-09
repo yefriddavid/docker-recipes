@@ -3,7 +3,7 @@
 You will found some important commands for some of this beautyfull tools for developers **php 7.2, mongodb, cron-laravel, ngnex) among others**
 
 
-### Documentation for humans and beginners
+### Documentation for humans or beginners
 
 ### I am buiding this for now
 Some topics that you will found here
@@ -23,19 +23,24 @@ Firehole \
 
 ### Docker install
 ```
-sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-``uname -s``-``uname -m`` -o /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ### Some utils docker commands
 
+docker ps
+docker network ls
+docker network inspect **docker-network-name**
+
 ### Change volumen name
 docker tag image-id image-name
 
 ### Run docker image command over a specific folder
+```
 docker run --rm --volume $PWD:/app/temp  -w /app/temp node npm install \
 docker run --rm -v $PWD:/app -w /app yefriddavid/nginx-php7.2 composer update 
-
+```
 
 
 ### Docker composer container
