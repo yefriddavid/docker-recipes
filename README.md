@@ -1,4 +1,5 @@
-# docker-laravel-recipes (php 7.2, mongodb, cron-laravel)
+# Docker-NodeJs-Laravel Recipes 
+## (php 7.2, mongodb, cron-laravel, ngnex) among others
 
 ## Documentation for humans and beginners
 
