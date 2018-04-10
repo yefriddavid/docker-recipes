@@ -26,7 +26,7 @@ Some topics that you will found here
 - [ ] Dockers Networks 
 - [ ] Firehole 
 
-
+npm i self-update
 
 ### Docker and Docker-compose Intallation
 ```
