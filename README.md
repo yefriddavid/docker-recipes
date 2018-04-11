@@ -288,4 +288,7 @@ para scripts
 
 crea las claves
  php artisan passport:keys
- 
+  php artisan key:generate
+  php artisan config:cache
+  php artisan config:clear
+  
