@@ -286,3 +286,6 @@ para scripts
 # docker-composer-php
 
 
+crea las claves
+ php artisan passport:keys
+ 
