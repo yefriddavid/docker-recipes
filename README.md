@@ -292,3 +292,8 @@ crea las claves
   php artisan config:cache
   php artisan config:clear
   
+  
+  
+client_credentials
+
+password_client = 1
