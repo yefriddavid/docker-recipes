@@ -297,3 +297,15 @@ crea las claves
 client_credentials
 
 password_client = 1
+
+
+
+
+pdo_mysql.default_socket	
+socat UNIX-LISTEN:/var/run/mysqld/mysqld.sock,fork,reuseaddr,unlink-early,user=mysql,group=mysql,mode=777 TCP:173.17.0.32:3306
+socat UNIX-LISTEN:/var/mysql/mysql.sock,fork,reuseaddr,unlink-early,user=mysql,group=mysql,mode=777 TCP:10.60.0.86:3306
+socat UNIX-LISTEN:/tmp/mysql.sock,fork,reuseaddr,unlink-early,user=mysql,group=mysql,mode=777 TCP:10.60.0.86:3306
+
+
+
+
