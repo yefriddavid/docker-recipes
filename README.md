@@ -308,4 +308,8 @@ socat UNIX-LISTEN:/tmp/mysql.sock,fork,reuseaddr,unlink-early,user=mysql,group=m
 
 
 
+docker build -t dockername .
+
+
+
 
