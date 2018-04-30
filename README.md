@@ -311,5 +311,10 @@ socat UNIX-LISTEN:/tmp/mysql.sock,fork,reuseaddr,unlink-early,user=mysql,group=m
 docker build -t dockername .
 
 
+```
+docker network create --driver=bridge \
+--subnet=173.17.0.0/16 --gateway=192.168.127.1 \
+--ip-range=192.168.127.128/25 microvoz_net
+```
 
 
