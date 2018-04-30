@@ -318,3 +318,9 @@ docker network create --driver=bridge \
 ```
 
 
+```
+docker network create --driver=bridge --subnet=173.17.0.0/16 microvoz_net
+
+```
+
+
