@@ -325,6 +325,10 @@ docker network create --driver=bridge --subnet=173.17.0.0/16 microvoz_net
 
 
 clear logs docker
+```
 truncate -s 0 /var/lib/docker/containers/*/*-json.log
+docker ps -s
+docker system df
+```
 
 
