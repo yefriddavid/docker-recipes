@@ -1,12 +1,12 @@
 # Docker-NodeJs-Laravel Recipes 
 
-You will found some important commands for some of this beautyfull tools for developers **php 7.2, mongodb, cron-laravel, ngnex) among others**
+You will found some important commands for these usefull tools for developers as they are, **php 7.2, mongodb, cron-laravel, ngnex) among others**
 
 
-### Documentation for humans or beginners
+### Documentation for beginners
 
-### I am buiding this for now, please sorry for this garabatos
-Some topics that you will found here
+### I am buiding this for now, please sorry for these scribbles
+Some topics that you will found here.
 - [x] Docker and Docker-compose Intallation
 - [ ] NodeJs and NVM Installaction
 - [x] Docker Configuration and Commands 
