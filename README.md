@@ -331,4 +331,11 @@ docker ps -s
 docker system df
 ```
 
-
+```
+docker network create \
+    --subnet=173.17.0.0/16 \
+    --driver=bridge \
+    --ipam-driver=default \
+    -o "com.docker.network.bridge.name"="app-network" \
+    app-network
+```
